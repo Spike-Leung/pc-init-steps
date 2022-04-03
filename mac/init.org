@@ -10,6 +10,7 @@
 
 * icloud
   - 关闭所有不必要的同步, 避免瞬间填满 icloud
+
 * 常用软件下载
   - wechat
   - qq
@@ -62,6 +63,7 @@
     - 初始化用户名 & 邮箱
     - git config --global user.name "Spike"
     - git config --global user.email "l-yanlei@hotmail.com"
+    - git config --global init.defaultBranch trunk
   - [[https://nodejs.org/en/][Node.js]]
   - [[https://brew.sh/][Homebrew]]
     - [[https://github.com/Homebrew/discussions/discussions/1512][errors with brew update: fatal: Could not resolve HEAD to a revision. brew doctor errors]]
