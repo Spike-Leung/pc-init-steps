@@ -1,0 +1,92 @@
+:PROPERTIES:
+:ID:       A829CF41-D079-46E9-8CA1-2FE12057FC4E
+:END:
+#+title: mac-init
+* 更新系统
+  系统可能不是最新的，会缺少一些环境，最好先更新
+
+* 按键
+  system preference -> keyboard -> modifier keys -> Caps -> Ctrl
+
+* icloud
+  - 关闭所有不必要的同步, 避免瞬间填满 icloud
+* 常用软件下载
+  - wechat
+  - qq
+  - 网易云
+  - chrome
+  - firefox
+    - 配置代理后，用 chrome 挂代理下载，不然会下了国内的版本，非常恶心
+     (主页上很多垃圾中文网站，登录会出现什么火狐通行证)
+    - 如果不小心下了国内版本，可以卸载，并且根据[[https://support.mozilla.org/en-US/kb/uninstall-firefox-from-your-computer][卸载文档]]卸载用户信息，
+      重新安装
+  - dropbox (下载好后，在左侧栏找到 dropbox 驱动安装)
+  - [[https://www.zotero.org/][Zotero]] 文献管理
+  - [[https://github.com/ripperhe/Bob][Bob]] 方便的翻译软件
+  - [[https://github.com/koddo/org-clock-statusbar-app][org-clock-statusbar-app]] Org mode clock 状态提示
+  - [[https://www.logitech.com/en-us/software/options.html][Logic Options]] 罗技鼠标置
+  - [[https://rime.im/][RIME 输入法]] 方便中英文切换
+  - [[https://beancount.github.io/fava/][fava]] beancount 图形客户端
+    - 配置 .zshrc 中指定 beancount 文件入口，注意要绝对路径
+    - ~export BEANCOUNT_FILE="absolute path to beancount file"~
+
+* 代理配置
+  - 代理还没有之前可能连 github 都上不去，
+  - [[https://github.com/yichengchen/clashX][clashx]]
+  - 复制代理到配置目录
+    - 可以新建，配置一下服务器相关信息
+    - 或者直接从云端或者 u 盘复制过来
+** 配置代理
+*** git
+    - git config --global http.proxy http://127.0.0.1:7890
+    - git config --global https.proxy https://127.0.0.1:7890
+
+* 安装终端
+  - [[https://iterm2.com/][iterm2]]
+  - [[https://ohmyz.sh/][ohmyz.sh]]
+  - [[https://github.com/romkatv/powerlevel10k][powerlevel10k]] ohmyzsh 主题（option）
+
+** iterm2 设置
+*** Appearance
+    - Exclude from Dock...
+*** Keys
+    - Show/hide all windows with...
+*** Profiles
+**** Window
+     - Style: Full-Width Bottom
+     - Transparency: 30
+
+* 安装环境
+  - git
+    - 创建 ~~/Documents/git~ 目录存放 git 仓库
+    - 初始化用户名 & 邮箱
+    - git config --global user.name "Spike"
+    - git config --global user.email "l-yanlei@hotmail.com"
+  - [[https://nodejs.org/en/][Node.js]]
+  - [[https://brew.sh/][Homebrew]]
+    - [[https://github.com/Homebrew/discussions/discussions/1512][errors with brew update: fatal: Could not resolve HEAD to a revision. brew doctor errors]]
+    - ~rm -rf $(brew --repo homebrew/core)~
+    - ~brew tap homebrew/core~
+
+* emacs
+** 下载配置文件
+   - [[https://github.com/Spike-Leung/emacs.d][emacs.d]]
+   - ~git clone --recurse-submodules https://github.com/Spike-Leung/emacs.d.git~
+
+** 下载 emacs
+   - https://emacsformacosx.com/
+** 配置 emacs 命令行启动
+   https://emacsformacosx.com/tips
+   - 检查是否有可执行权限，没有则增加
+   - chmod 755 ec emacs
+** 添加 ruby 访问文件权限
+   - 因为 eamcs 客户端用的 ruby，要给 ruby 权限，emacs 才能访问目录
+   - ruby 路径: ~/usr/bin/ruby~
+** 常用文件软链接
+   - ln -s ~/Dropbox/org ~/org
+   - ln -s ~/Dropbox/org-roam ~/org-roam
+   - ln -s ~/Dropbox/beancount ~/beancount
+** emacs 插件配置
+   - web mode 缩进
+
+* mu & mu4e 邮件配置
