@@ -4,13 +4,11 @@
 #+title: mac-init
 * 更新系统
   系统可能不是最新的，会缺少一些环境，最好先更新
-
 * 按键
-  system preference -> keyboard -> modifier keys -> Caps -> Ctrl
+  Caps -> Ctrl
 
 * icloud
   - 关闭所有不必要的同步, 避免瞬间填满 icloud
-
 * 常用软件下载
   - wechat
   - qq
@@ -29,7 +27,13 @@
   - [[https://rime.im/][RIME 输入法]] 方便中英文切换
   - [[https://beancount.github.io/fava/][fava]] beancount 图形客户端
     - 配置 .zshrc 中指定 beancount 文件入口，注意要绝对路径
-    - ~export BEANCOUNT_FILE="absolute path to beancount file"~
+    - ~export BEANCOUNT_FILE="/Users/spike/beancount/main.beancount"~
+  - [[https://github.com/dwarvesf/hidden][hidden]] 隐藏菜单栏
+  - [[https://github.com/withfig/autocomplete][fig]] 命令行补全提示
+  - [[https://manytricks.com/moom/][Moom]] 分屏
+  - pomodorome 一款不错的番茄时钟，功能简单，够用
+  - [[https://www.raycast.com/][Raycast]] 替换 spotlight
+  - [[https://starship.rs/][starship]] shell theme
 
 * 代理配置
   - 代理还没有之前可能连 github 都上不去，
@@ -70,6 +74,9 @@
     - ~rm -rf $(brew --repo homebrew/core)~
     - ~brew tap homebrew/core~
 
+* homebrew
+  - brew install coreutils
+
 * emacs
 ** 下载配置文件
    - [[https://github.com/Spike-Leung/emacs.d][emacs.d]]
@@ -88,7 +95,12 @@
    - ln -s ~/Dropbox/org ~/org
    - ln -s ~/Dropbox/org-roam ~/org-roam
    - ln -s ~/Dropbox/beancount ~/beancount
+   - ln -s ~/Dropbox/.zshrc ~/.zshrc
 ** emacs 插件配置
    - web mode 缩进
 
 * mu & mu4e 邮件配置
+  - [[id:a4090ef6-e38a-4868-9ccf-9d212b4174db][mu4e-installation]]
+
+* Others config
+  - [[https://www.robinwieruch.de/mac-setup-web-development/][Mac Setup for Web Development [202]​]]
